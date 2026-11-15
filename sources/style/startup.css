@@ -1,0 +1,18 @@
+#startup{position:fixed;z-index:10000;inset:0;display:grid;place-items:center;background:radial-gradient(ellipse at 47% 35%,#54295c,#251635 58%,#191423);color:#fff2ff;font:16px system-ui,sans-serif}
+#startup[hidden]{display:none}
+#startup section{width:min(90vw,490px);padding:36px;border:1px solid #f7a8ed44;border-radius:18px;background:#281931;box-shadow:0 12px 60px #160d1b80}
+#startup h1{margin:0 0 12px;font:800 clamp(34px,7vw,74px)/1 system-ui,sans-serif;color:#ffc0f2}
+#startup p{line-height:1.5;color:#e8cfe7}
+#startup nav{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:20px}
+#startup button,#startup a{font:700 14px system-ui,sans-serif;border:1px solid #f8a9e56b;border-radius:8px;background:#40234d;color:#fff6ff;padding:.7rem .9rem;text-decoration:none}
+#startup button[hidden]{display:none}
+
+.arsh-gallery-link{position:fixed;top:18px;left:18px;z-index:9000;color:white;background:#291734;font:700 14px system-ui,sans-serif;border:1px solid #ffc0f266;border-radius:8px;padding:.65rem .85rem;text-decoration:none}
+
+.arsh-social{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;color:#fff}
+.arsh-social img{display:block;box-sizing:content-box;padding:6px;border-radius:7px;object-fit:contain;flex:none;background:var(--brand)}
+.arsh-social--linkedin{--brand:#0a66c2}.arsh-social--discord{--brand:#5865f2}
+.arsh-social:hover{text-decoration:underline}
+#arsh-contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+
+.arsh-social--email{--brand:#724c99}
