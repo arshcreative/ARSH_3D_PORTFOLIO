@@ -14,20 +14,31 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      pages: write
+
     steps:
       - uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
           cache: npm
+
       - run: npm ci
       - run: npm run build
+
       - name: Check Pages output
         run: |
           test -f dist/index.html
           test -f dist/portfolio.html
           test -f dist/ui/previews/options-arsh.jpg
           test -f dist/ui/achievements/rewards/blue.png
+
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
@@ -38,9 +49,11 @@ jobs:
     permissions:
       pages: write
       id-token: write
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Publish
         id: deployment
